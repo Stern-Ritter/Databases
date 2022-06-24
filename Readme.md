@@ -1,5 +1,7 @@
 # Добавляем в модель данных дополнительные индексы и ограничения
 
+![Модель](https://github.com/Stern-Ritter/Databases/blob/homework-2/Model.jpg?raw=true)
+
 ###### Самые нагруженные таблицы: 'articles', 'comments', 'article_likes', 'comments_likes'.
 
 ###### Помимо индексов по первичным ключам (PK) которые будут созданы автоматически.
