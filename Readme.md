@@ -51,10 +51,10 @@ analyze documents.articles;
 ###### Запрос на получение всех статей, у которых в названии есть слова 'gadgets'и 'instruments':
 ```sql
 select 
-	title,
-	description,
-	body,
-	created_at
+  title,
+  description,
+  body,
+  created_at
 from documents.articles
 where title @@ to_tsquery('gadgets | instruments' );
 ```
@@ -83,10 +83,10 @@ analyze documents.articles;
 ```sql
 explain analyze
 select 
-	title,
-	description,
-	body,
-	created_at
+  title,
+  description,
+  body,
+  created_at
 from documents.articles
 where state = 1;
 ```
@@ -154,43 +154,43 @@ Bitmap Index Scan — используется индекс nickname_idx для 
 insert into documents.states
 (description)
 values('pending'),
-('approved'),
-('rejected');
+  ('approved'),
+  ('rejected');
 ```
 ###### Таблица пользователей:
 ```sql
 insert into administration.users 
 (username, nickname, email, gender)
 values('Pauline Bernt', 'Falefama', 'nora81@yahoo.com', 'f'),
-('Hivard Agnete', 'Gagrlus', 'eirik21@hotmail.com', 'm'),
-('Benjamin Ebba', 'Hedan', 'amalie_johansen@gmail.com', 'm'),
-('Vigdis Knut', 'Alierinn', 'jenny.solberg@hotmail.com', 'f'),
-('Eline Jesper', 'Chanoda', 'hedda79@gmail.com', 'f'),
-('Marianne Bernt', 'Aurilau', 'jake80@yahoo.com', 'f'),
-('Runar Annette', 'Kittywake', 'wava9@hotmail.com', 'f'),
-('Alexandra Natalie', 'Evomind', 'davon18@gmail.com', 'f'),
-('Barbara Maria', 'Rubrick', 'lolita96@gmail.com', 'f'),
-('Dina Agnethe', 'RowanTree', 'hillary23@gmail.com', 'f'),
-('Liss Amund', 'RadishRush', 'brandyn38@gmail.com', 'f'),
-('Brynhild Birgitta', 'Succubus', 'tate52@gmail.com', 'f'),
-('Aase Gustav', 'Moonlighter', 'benedict45@yahoo.com', 'm'),
-('Laura Frans', 'Saddlewitch', 'aubrey86@yahoo.com', 'f'),
-('Anita Rikard', 'NightLady', 'efren26@yahoo.com', 'f'),
-('Viljar Walter', 'Ouster', 'roscoe25@yahoo.com', 'm'),
-('Tore Regina', 'MonteSuma', 'aryanna16@yahoo.com', 'f'),
-('Anette Ella', 'CrosStorm', 'pansy4@yahoo.com', 'f'),
-('Aina Solfrid', 'Rhenus', 'uriel81@yahoo.com', 'f'),
-('Anita Gina', 'Aurilau', 'candice3@gmail.com', 'f'),
-('Tonje Sidsel', 'Dreadlight', 'erich15@gmail.com', 'm'),
-('Torborg Lennart', 'Gigadude', 'hipolito35@hotmail.com', 'm'),
-('Martha Anders', 'Mildewed', 'leda16@gmail.com', 'f'),
-('Dagfinn Edvin', 'Pralltiller', 'fredy62@yahoo.com', 'm'),
-('Torleif Torild', 'CitarNosis', 'felix63@yahoo.com', 'm'),
-('Teresa Herleif', 'SappySue', 'beryl62@hotmail.com', 'f'),
-('Birgitta Vilde', 'Scoundrella', 'crawford18@yahoo.com', 'f'),
-('Stian Rebekka', 'Mildewed', 'hillard23@yahoo.com', 'f'),
-('Audhild Sonja', 'Midgeabean', 'humberto78@gmail.com', 'f'),
-('Oscar Carl', 'Papaur', 'junior29@gmail.com', 'm');
+  ('Hivard Agnete', 'Gagrlus', 'eirik21@hotmail.com', 'm'),
+  ('Benjamin Ebba', 'Hedan', 'amalie_johansen@gmail.com', 'm'),
+  ('Vigdis Knut', 'Alierinn', 'jenny.solberg@hotmail.com', 'f'),
+  ('Eline Jesper', 'Chanoda', 'hedda79@gmail.com', 'f'),
+  ('Marianne Bernt', 'Aurilau', 'jake80@yahoo.com', 'f'),
+  ('Runar Annette', 'Kittywake', 'wava9@hotmail.com', 'f'),
+  ('Alexandra Natalie', 'Evomind', 'davon18@gmail.com', 'f'),
+  ('Barbara Maria', 'Rubrick', 'lolita96@gmail.com', 'f'),
+  ('Dina Agnethe', 'RowanTree', 'hillary23@gmail.com', 'f'),
+  ('Liss Amund', 'RadishRush', 'brandyn38@gmail.com', 'f'),
+  ('Brynhild Birgitta', 'Succubus', 'tate52@gmail.com', 'f'),
+  ('Aase Gustav', 'Moonlighter', 'benedict45@yahoo.com', 'm'),
+  ('Laura Frans', 'Saddlewitch', 'aubrey86@yahoo.com', 'f'),
+  ('Anita Rikard', 'NightLady', 'efren26@yahoo.com', 'f'),
+  ('Viljar Walter', 'Ouster', 'roscoe25@yahoo.com', 'm'),
+  ('Tore Regina', 'MonteSuma', 'aryanna16@yahoo.com', 'f'),
+  ('Anette Ella', 'CrosStorm', 'pansy4@yahoo.com', 'f'),
+  ('Aina Solfrid', 'Rhenus', 'uriel81@yahoo.com', 'f'),
+  ('Anita Gina', 'Aurilau', 'candice3@gmail.com', 'f'),
+  ('Tonje Sidsel', 'Dreadlight', 'erich15@gmail.com', 'm'),
+  ('Torborg Lennart', 'Gigadude', 'hipolito35@hotmail.com', 'm'),
+  ('Martha Anders', 'Mildewed', 'leda16@gmail.com', 'f'),
+  ('Dagfinn Edvin', 'Pralltiller', 'fredy62@yahoo.com', 'm'),
+  ('Torleif Torild', 'CitarNosis', 'felix63@yahoo.com', 'm'),
+  ('Teresa Herleif', 'SappySue', 'beryl62@hotmail.com', 'f'),
+  ('Birgitta Vilde', 'Scoundrella', 'crawford18@yahoo.com', 'f'),
+  ('Stian Rebekka', 'Mildewed', 'hillard23@yahoo.com', 'f'),
+  ('Audhild Sonja', 'Midgeabean', 'humberto78@gmail.com', 'f'),
+  ('Oscar Carl', 'Papaur', 'junior29@gmail.com', 'm');
 ```
 ###### Таблица статей:
 ```sql
